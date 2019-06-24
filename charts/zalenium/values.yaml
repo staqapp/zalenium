@@ -64,7 +64,7 @@ hub:
   ## Environment variables passed to Zalenium hub.
   ## https://github.com/zalando/zalenium/blob/master/docs/usage_examples.md
   desiredContainers: 2
-  maxDockerSeleniumContainers: 10
+  maxDockerSeleniumContainers: 40
   videoRecordingEnabled: true
   # the limits/requests below are for Selenium pods (containers)
   cpuRequest: 250m
