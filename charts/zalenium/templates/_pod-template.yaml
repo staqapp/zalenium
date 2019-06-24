@@ -146,8 +146,7 @@ spec:
         - name: {{ $key | quote }}
           value: {{ $val | quote }}
         {{ end }}
-      args:
-        - start
+      args: ["start", "--videoRecordingEnabled", "false", "--desiredContainers", "0", "--maxDockerSeleniumContainers", "10"]
       resources:
         {{- toYaml .Values.hub.resources | nindent 8 }}
       volumeMounts:
@@ -164,8 +163,12 @@ spec:
   tolerations:
 {{ toYaml .Values.tolerations | indent 4 }}
   {{- end }}
+<<<<<<< HEAD
   {{- if .Values.affinity }}
   affinity:
 {{ toYaml .Values.affinity | indent 4 }}
   {{- end -}}
 {{- end }}
+=======
+{{- end }}
+>>>>>>> Add changes for staq custom needs
